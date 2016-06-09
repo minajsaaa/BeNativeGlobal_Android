@@ -2,6 +2,7 @@ package com.smatoos.b2b.application;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 import com.smatoos.b2b.R;
@@ -17,7 +18,7 @@ public class BaseApplication extends Application {
         super.onCreate();
 
         //  Todo
-
+        Stetho.initializeWithDefaults(this);
    }
 
     synchronized public Tracker getDefaultTracker() {

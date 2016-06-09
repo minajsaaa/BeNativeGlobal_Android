@@ -2,8 +2,8 @@ package com.smatoos.nobug.net;
 
 import android.content.Context;
 
+import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.smatoos.nobug.constant.HeaderProperty;
-import com.smatoos.nobug.util.DeviceInfoUtil;
 
 import java.io.IOException;
 import java.security.cert.CertificateException;
@@ -38,7 +38,10 @@ public class RetrofitBuilder {
      */
     public static OkHttpClient getOkHttpClient(final Context context) {
         if (client == null) {
-            client = new OkHttpClient.Builder().addInterceptor(getInterceptor(context)).build();
+            client = new OkHttpClient.Builder()
+                    .addInterceptor(getInterceptor(context))
+                    .addNetworkInterceptor(new StethoInterceptor())
+                    .build();
         }
         return client;
     }
@@ -123,7 +126,9 @@ public class RetrofitBuilder {
 
             unsafeClient = new OkHttpClient.Builder().sslSocketFactory(sslContext.getSocketFactory())
                     .hostnameVerifier(org.apache.http.conn.ssl.SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER)
-                    .addInterceptor(getInterceptor(context)).build();
+                    .addInterceptor(getInterceptor(context))
+                    .addNetworkInterceptor(new StethoInterceptor())
+                    .build();
             return unsafeClient;
         } catch (Exception e) {
             throw new RuntimeException(e);
