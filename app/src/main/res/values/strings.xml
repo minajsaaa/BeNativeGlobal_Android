@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">BeNativeGlobal_Android</string>
+
+    <!--facebook-->
+    <string name="facebook_app_id">1103474426357476</string>
+
+    <!--network-->
+    <string name="network_connection">네트워크 연결</string>
+    <string name="network_error_status">네크워크 연결상태를 확인해 주세요.</string>
+    <string name="network_error_message">네트워크에 접속할수 없습니다.\n네크워크 연결상태를 확인해 주세요.</string>
+    <string name="url_connect_failed">해당 URL에 연결할 수 없습니다.</string>
+    <string name="page_load_failed">알수 없는 문제로 페이지를 로드하지 못했습니다.</string>
+    <string name="blank">about:blank</string>
+    <string name="retry">재시도</string>
+
+    <!--webview-->
+    <string name="browser_download">다운로드가 시작되었습니다.</string>
+    <string name="browser_title">Browser</string>
+    <string name="permissions">사용자의 위치정보를 사용하고자 합니다.</string>
+    <string name="accept">허용</string>
+    <string name="rejection">거부</string>
+    <string name="image_folder_name">benative_global</string>
+    <string name="android">android</string>
+
+    <!--alert-->
+    <string name="alert_confirm">확인</string>
+    <string name="alert_cancel">취소</string>
+
+    <!--default loading progress-->
+    <string name="default_loading_comment">정보를 수신중입니다.</string>
+
 </resources>
