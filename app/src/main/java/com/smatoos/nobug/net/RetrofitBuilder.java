@@ -3,11 +3,13 @@ package com.smatoos.nobug.net;
 import android.content.Context;
 
 import com.facebook.stetho.okhttp3.StethoInterceptor;
+import com.google.gson.Gson;
 import com.smatoos.nobug.constant.HeaderProperty;
 
 import java.io.IOException;
 import java.security.cert.CertificateException;
 import java.util.HashMap;
+import java.util.IllegalFormatConversionException;
 import java.util.Map;
 
 import javax.net.ssl.SSLContext;
@@ -18,6 +20,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import retrofit2.Converter;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -134,5 +137,8 @@ public class RetrofitBuilder {
             throw new RuntimeException(e);
         }
     }
+
+    //  =======================================================================================
+
 
 }

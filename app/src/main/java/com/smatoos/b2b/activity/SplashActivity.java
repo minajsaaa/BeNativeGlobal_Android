@@ -42,7 +42,6 @@ public class SplashActivity extends BaseActivity implements Callback {
     @Override
     public void configureListener() {
         super.configureListener();
-
     }
 
     //  ========================================================================================
@@ -56,4 +55,5 @@ public class SplashActivity extends BaseActivity implements Callback {
     public void onFailure(Call call, Throwable t) {
         log.show("onFailure : " + t.getLocalizedMessage() );
     }
+
 }

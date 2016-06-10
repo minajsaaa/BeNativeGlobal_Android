@@ -16,7 +16,7 @@ public class VersionItem extends BaseModel {
     }
 */
 
-    private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 01L;
 
     //	==========================================================================================
 
